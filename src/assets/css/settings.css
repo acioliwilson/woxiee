@@ -1,0 +1,7 @@
+:root {
+    --default-color: #141933;
+    --hover-light-link: #C98EFE;
+    --text-purple: #A982E1;
+    --btn-fill-gradient: linear-gradient(320deg, #CD8DFF, #7BA3E4);
+    --btn-outline-purple: #9E58F0;
+}
