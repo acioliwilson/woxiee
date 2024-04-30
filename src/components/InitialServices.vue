@@ -1,9 +1,9 @@
 <template>
 <section class="services container my-5">
     <h2 class="d-flex align-items-center justify-content-center gap-4">
-        <img src="@/assets/images/right-arrow.png">
+        <img src="@/assets/images/right-arrow.png" class="img-fluid">
         <span>Somos especialistas em</span>
-        <img src="@/assets/images/left-arrow.png">
+        <img src="@/assets/images/left-arrow.png" class="img-fluid">
     </h2>
     <div class="cards-flex">
         <div class="s-card">
@@ -61,6 +61,9 @@
 </template>
 
 <style lang="css" scoped>
+.services {
+    overflow-x: hidden;
+}
 .services h2 {
     font-family: 'Open Sans', sans-serif;
     font-size: 35px;

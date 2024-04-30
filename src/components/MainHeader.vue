@@ -2,13 +2,19 @@
 <header>
     <div class="container mt-4">
         <div class="d-flex justify-content-between align-items-center">
-            <router-link to="/"><img src="@/assets/images/woxiee-logo.png" alt="Woxiee logo"></router-link>
+            <router-link to="/"><img src="@/assets/images/woxiee-logo.png" class="img-fluid" alt="Woxiee logo"></router-link>
+            <input type="checkbox" id="navCheck">
+            <label for="navCheck" class="btn-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
             <nav class="main-navbar">
-                <router-link to="/a-woxiee">A Woxiee</router-link>
-                <router-link to="/serviços">Serviços</router-link>
-                <router-link to="/portfolio">Portfólio</router-link>
-                <router-link to="/blog">Blog</router-link>
-                <router-link to="/contato">Diga Olá</router-link>
+                <router-link to="/a-woxiee" @click="unChecked">A Woxiee</router-link>
+                <router-link to="/serviços" @click="unChecked">Serviços</router-link>
+                <router-link to="/portfolio" @click="unChecked">Portfólio</router-link>
+                <router-link to="/blog" @click="unChecked">Blog</router-link>
+                <router-link to="/contato" @click="unChecked">Diga Olá</router-link>
             </nav>
         </div>
     </div>
@@ -20,7 +26,7 @@
                     com a <span class="purple">Woxiee</span>!
                 </h1>
                 <p class="banner-description">
-                    Transforme sua presença digital com sites que impressionam, criados sob medida para você pela Woxiee. Desde designs arrojados até funcionalidades avançadas, nós trazemos sua visão à vida na web. Seja notado, seja lembrado, seja Woxiee!
+                    Transforme sua presença digital com sites que impressionam, criados sob medida para você pela Woxiee. Desde designs arrojados até funcionalidades avançadas, nós trazemos sua visão à vida na web. <span style="font-weight: 700;">Seja notado, seja lembrado, seja Woxiee!</span>
                 </p>
                 <router-link class="btn-fill-gradient mt-5" to="/servicos">Comece Agora!</router-link>
             </div>
@@ -32,6 +38,21 @@
     <img src="@/assets/images/long-waves.png" alt="Waves" class="long-waves">
 </header>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            check: false,
+        }
+    },
+    methods: {
+        unChecked() {
+            document.getElementById('navCheck').checked = false
+        }
+    }
+}
+</script>
 
 <style scoped>
 header {
