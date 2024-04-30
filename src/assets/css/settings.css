@@ -5,3 +5,31 @@
     --btn-fill-gradient: linear-gradient(320deg, #CD8DFF, #7BA3E4);
     --btn-outline-purple: #9E58F0;
 }
+
+.btn-fill-gradient {
+    border-radius: 100px;
+    padding: 15px 25px;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 18px;
+    display: table;
+    background-image: var(--btn-fill-gradient);
+}
+
+.btn-outline-purple {
+    border-radius: 100px;
+    border: 2px solid var(--btn-outline-purple);
+    color: var(--btn-outline-purple);
+    padding: 15px 25px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    margin: 20px auto;
+    display: table;
+    transition: .3s ease all;
+}
+
+.btn-outline-purple:hover {
+    background: var(--btn-outline-purple);
+    color: #FFF;
+}

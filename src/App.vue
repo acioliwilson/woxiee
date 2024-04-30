@@ -1,102 +1,15 @@
 <template>
-<header>
-  <div class="container mt-4">
-    <div class="d-flex justify-content-between align-items-center">
-      <router-link to="/"><img src="@/assets/images/woxiee-logo.png" alt="Woxiee logo"></router-link>
-      <nav class="main-navbar">
-        <router-link to="/a-woxiee">A Woxiee</router-link>
-        <router-link to="/serviços">Serviços</router-link>
-        <router-link to="/portfolio">Portfólio</router-link>
-        <router-link to="/blog">Blog</router-link>
-        <router-link to="/contato">Diga Olá</router-link>
-      </nav>
-    </div>
-  </div>
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-md-8 text-light">
-        <h1 class="banner-title">
-          Desbloqueie seu Potencial Online <br />
-          com a <span class="purple">Woxiee</span>!
-        </h1>
-        <p class="banner-description">
-          Transforme sua presença digital com sites que impressionam, criados sob medida para você pela Woxiee. Desde designs arrojados até funcionalidades avançadas, nós trazemos sua visão à vida na web. Seja notado, seja lembrado, seja Woxiee!
-        </p>
-        <router-link class="btn-fill-gradient mt-5" to="/servicos">Comece Agora!</router-link>
-      </div>
-      <div class="col-md-4 text-light">
-        <img src="@/assets/images/w-icon.png" alt="W Icon">
-      </div>
-    </div>
-  </div>
-  <img src="@/assets/images/long-waves.png" alt="Waves" class="long-waves">
-</header>
+<MainHeader />
 
 <section class="about-us container mt-5">
   <p class="text-center">Na Woxiee, não apenas construímos sites - nós criamos experiências digitais excepcionais que impulsionam seu sucesso online. Com anos de experiência e uma equipe apaixonada, estamos comprometidos em oferecer não apenas designs deslumbrantes, mas também funcionalidades poderosas que elevam sua marca a novos patamares. Nossa abordagem centrada no cliente e nossa dedicação à inovação nos diferenciam, garantindo que cada projeto seja único e impactante. Junte-se a nós para uma jornada digital emocionante, onde sua visão se torna realidade.</p>
   <router-link class="btn-outline-purple" to="/a-woxiee">Descubra Mais</router-link>
 </section>
 
-<section class="services container my-5">
-  <h2 class="d-flex align-items-center justify-content-center gap-4">
-    <img src="@/assets/images/right-arrow.png">
-    <span>Somos especialistas em</span>
-    <img src="@/assets/images/left-arrow.png">
-  </h2>
-  <div class="cards-flex">
-    <div class="s-card">
-      <div class="s-card-body">
-        <img src="@/assets/images/custom-design-icon.png" alt="Custom Design Icon">
-        <p>
-          <span>Design Personalizado</span><br />
-          Nossos especialistas em design transformam suas ideias em realidade visualmente deslumbrante, garantindo que seu site se destaque da concorrência.
-        </p>
-        <router-link class="btn-fill-gradient" to="/servicos">Saiba Mais</router-link>
-      </div>
-    </div>
-    <div class="s-card">
-      <div class="s-card-body">
-        <img src="@/assets/images/responsive-design-icon.png" alt="Responsive Design Icon">
-        <p>
-          <span>Desenvolvimento Web Responsivo</span><br />
-          Criamos sites intuitivos e responsivos que funcionam perfeitamente em todos os dispositivos, proporcionando uma experiência excepcional.
-        </p>
-        <router-link class="btn-fill-gradient" to="/servicos">Saiba Mais</router-link>
-      </div>
-    </div>
-    <div class="s-card">
-      <div class="s-card-body">
-        <img src="@/assets/images/seo-icon.png" alt="SEO Icon">
-        <p>
-          <span>Otimização para Motores de Busca (SEO)</span><br />
-          Aumente sua visibilidade online e conquiste mais tráfego orgânico com nossas estratégias de SEO personalizadas e eficazes.
-        </p>
-        <router-link class="btn-fill-gradient" to="/servicos">Saiba Mais</router-link>
-      </div>
-    </div>
-    <div class="s-card">
-      <div class="s-card-body">
-        <img src="@/assets/images/ecommerce-icon.png" alt="Ecommerce Icon">
-        <p>
-          <span>Integração de E-Commerce</span><br />
-          Potencialize suas vendas online com uma loja virtual totalmente funcional e segura, projetada para impulsionar o crescimento do seu negócio.
-        </p>
-        <router-link class="btn-fill-gradient" to="/servicos">Saiba Mais</router-link>
-      </div>
-    </div>
-    <div class="s-card">
-      <div class="s-card-body">
-        <img src="@/assets/images/support-icon.png" alt="Support Icon">
-        <p>
-          <span>Manutenção e Suporte Contínuo</span><br />
-          Mantenha seu site sempre atualizado e protegido com nossos serviços de manutenção e suporte técnico especializado.
-        </p>
-        <router-link class="btn-fill-gradient" to="/servicos">Saiba Mais</router-link>
-      </div>
-    </div>
-  </div>
-</section>
+<InitialServices />
+
 <img src="@/assets/images/default-wave.png" style="margin: 0 auto; display: table;">
+
 <section class="jobs">
   <div class="jobs-bg">
     <div class="container">
@@ -104,15 +17,17 @@
         Jobs
       </h2>
       <img src="@/assets/images/job-underline-title.png" class="job-underline-title">
-      <div class="jobs-wrapper">
-        <img src="@/assets/images/job-01.png" alt="Dashboard Subscribers Resultados da Mega">
-        <img src="@/assets/images/job-02.png" alt="AvisaLoto SPA">
-        <img src="@/assets/images/job-03.png" alt="Resultados da Mega SPA">
+      <div class="jobs-wrapper mb-5">
+        <img src="@/assets/images/job-01.png" alt="Dashboard Subscribers Resultados da Mega" class="img-fluid">
+        <img src="@/assets/images/job-02.png" alt="AvisaLoto SPA" class="img-fluid">
+        <img src="@/assets/images/job-03.png" alt="Resultados da Mega SPA" class="img-fluid">
       </div>
     </div>
   </div>
 </section>
+
 <img src="@/assets/images/dots.png" class="dots">
+
 <section class="testimonials container">
   <h2>O que falam de nós</h2>
   <article class="left">
@@ -163,7 +78,7 @@
           <router-link to="/contato">Contato</router-link>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3 follow">
         <h2 class="purple-text">Siga-nos</h2>
         <div class="d-flex gap-3 align-items-center">
           <a href="#" class="social-icon">
@@ -185,6 +100,22 @@
 </footer>
 </template>
 
+<script>
+import MainHeader from '@/components/MainHeader.vue'
+import InitialServices from './components/InitialServices.vue';
+export default {
+  components: {
+    MainHeader,
+    InitialServices,
+  },
+  data() {
+    return {
+
+    }
+  }
+}
+</script>
+
 <style lang="css">
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('@/assets/css/settings.css');
@@ -192,110 +123,14 @@
 body { font-family: 'Open Sans', sans-serif !important; }
 a { text-decoration: none !important; }
 
-header {
-  width: 100%;
-  min-height: 730px;
-  background: var(--default-color);
-  display: table;
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
 }
-.main-navbar {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  justify-content: flex-end;
-}
-.main-navbar a {
-  text-decoration: none;
-  color: #FEFDFF;
-  font-size: 18px;
-  font-family: 'Open Sans', sans-serif;
-  transition: .3s ease all;
-}
-.main-navbar a:hover {
-  color: var(--hover-light-link);
-}
-.purple {
-  color: var(--text-purple);
-}
-.banner-title {
-  color: #FFF;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 1.3;
-  margin: 60px 0 0 0;
-}
-.banner-description {
-  line-height: 1.5;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  margin-top: 20px;
-}
-.btn-fill-gradient {
-  border-radius: 100px;
-  padding: 15px 25px;
-  color: #FFF;
-  font-weight: 600;
-  font-size: 18px;
-  display: table;
-  background-image: var(--btn-fill-gradient);
-}
-.long-waves {
-  transform: translateY(-50px);
-}
-.btn-outline-purple {
-  border-radius: 100px;
-  border: 2px solid var(--btn-outline-purple);
-  color: var(--btn-outline-purple);
-  padding: 15px 25px;
-  font-weight: 600;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 17px;
-  margin: 20px auto;
-  display: table;
-  transition: .3s ease all;
-}
-.btn-outline-purple:hover {
-  background: var(--btn-outline-purple);
-  color: #FFF;
-}
-.services h2 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 35px;
-  font-weight: 600;
-  color: #000;
-  margin: 0 auto;
+::-webkit-scrollbar-thumb {
+  background: violet;
 }
 
-.cards-flex {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
-.s-card {
-  padding: 30px;
-  border-radius: 15px;
-  border: 1px solid #EAEAEA;
-}
-.s-card-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  max-width: 250px !important;
-  text-align: center !important;
-}
-.s-card-body p {
-  font-size: 18px;
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.4;
-}
-.s-card-body p span {
-  font-weight: 700;
-  color: var(--text-purple);
-}
 .jobs {
   background: #141933 !important;
   display: table;
@@ -405,4 +240,42 @@ a.router-link-exact-active {
   color: #42b983;
 }
 */
+
+
+
+@media screen and (max-width: 1000px) {
+  .main-navbar {
+    width: 100%;
+    height: 100vh;
+    background: #141933;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: .3s ease all;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 200;
+  }
+  .w-icon {
+    display: none;
+  }
+  .long-waves {
+    transform: translateY(0) !important;
+    margin-top: 40px;
+  }
+  .banner-title {
+    margin: 0 !important;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .long-waves {
+    display: none !important;
+  }
+  .follow {
+    margin-top: 20px !important;
+    margin-bottom: 50px !important;
+  }
+}
 </style>
