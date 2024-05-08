@@ -11,8 +11,7 @@
             </label>
             <nav class="main-navbar">
                 <router-link to="/a-woxiee" @click="unChecked">A Woxiee</router-link>
-                <router-link to="/serviços" @click="unChecked">Serviços</router-link>
-                <router-link to="/portfolio" @click="unChecked">Portfólio</router-link>
+                <router-link to="/servicos" @click="unChecked">Serviços</router-link>
                 <router-link to="/blog" @click="unChecked">Blog</router-link>
                 <router-link to="/contato" @click="unChecked">Diga Olá</router-link>
             </nav>
@@ -28,7 +27,7 @@
                 <p class="banner-description">
                     Transforme sua presença digital com sites que impressionam, criados sob medida para você pela Woxiee. Desde designs arrojados até funcionalidades avançadas, nós trazemos sua visão à vida na web. <span style="font-weight: 700;">Seja notado, seja lembrado, seja Woxiee!</span>
                 </p>
-                <router-link class="btn-fill-gradient mt-5" to="/servicos">Comece Agora!</router-link>
+                <router-link class="btn-fill-gradient mt-5" to="/oferta">Comece Agora!</router-link>
             </div>
             <div class="col-md-4 text-light w-icon">
                 <img src="@/assets/images/w-icon.png" alt="W Icon" class="img-fluid">

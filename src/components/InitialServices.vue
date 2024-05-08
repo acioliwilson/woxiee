@@ -1,5 +1,5 @@
 <template>
-<section class="services container my-5">
+<section class="services container">
     <h2 class="d-flex align-items-center justify-content-center gap-4">
         <img src="@/assets/images/right-arrow.png" class="img-fluid">
         <span>Somos especialistas em</span>
@@ -104,5 +104,9 @@
 .s-card-body p span {
     font-weight: 700;
     color: var(--text-purple);
+}
+.btn-fill-gradient {
+    color: #FFF !important;
+    font-family: 'Open Sans', sans-serif !important;
 }
 </style>

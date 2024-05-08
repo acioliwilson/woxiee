@@ -2,7 +2,7 @@
 <MainHeader />
 <router-view />
 <footer>
-    <div class="container mt-5">
+    <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <router-link class="footer-logo" to="/">
@@ -19,7 +19,6 @@
                 <div class="map-links">
                     <router-link to="/a-woxiee">Sobre Nós</router-link>
                     <router-link to="/servicos">Serviços</router-link>
-                    <router-link to="/portfolio">Portfólio</router-link>
                     <router-link to="/blog">Blog</router-link>
                     <router-link to="/contato">Contato</router-link>
                 </div>
@@ -123,53 +122,14 @@ img.dots {
     display: table;
 }
 
-.testimonials h2 {
-    font-size: 35px;
-    font-weight: 600;
-    color: #000;
-    margin: 0 auto;
-    text-align: center;
-}
-
-article.left {
-    border-left: 3px solid #C98EFE;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding-left: 30px;
-    max-width: 1000px;
-    margin: 20px auto;
-}
-
-article.left div p {
-    margin: 0;
-}
-
-p.author {
-    font-weight: 700;
-}
-
-article.right {
-    border-right: 3px solid #C98EFE;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding-right: 30px;
-    max-width: 1000px;
-    margin: 20px auto;
-}
-
-article.right div p {
-    margin: 0;
-}
-
 footer {
     width: 100%;
-    min-height: 350px;
+    min-height: 300px;
     background: #333;
     display: table;
-    margin-top: 50px;
+    margin-top: 70px;
     color: #FFF;
+    padding: 50px 0;
 }
 
 footer div div div p {

@@ -26,39 +26,16 @@
 
 <img src="@/assets/images/dots.png" class="dots">
 
-<section class="testimonials container">
-    <h2>O que falam de nós</h2>
-    <article class="left">
-        <div class="content">
-            <p>Incrível experiência de trabalho com a Woxiee! Eles entenderam completamente nossas necessidades e entregaram um site que superou nossas expectativas. Altamente recomendado!</p>
-            <p class="author">Maria Silva, CEO da Elys Enxovais</p>
-        </div>
-        <img src="@/assets/images/vertical-dots.png">
-    </article>
-
-    <article class="right">
-        <img src="@/assets/images/vertical-dots.png">
-        <div class="content">
-            <p>Equipe profissional e dedicada! Fiquei impressionado com a atenção aos detalhes e o compromisso em garantir que nosso site fosse perfeito. Obrigado, Woxiee!</p>
-            <p class="author">João Oliveira, Proprietário da Apoio Logística</p>
-        </div>
-    </article>
-
-    <article class="left">
-        <div class="content">
-            <p>A Woxiee não apenas criou um site visualmente atraente, mas também nos ajudou a otimizá-lo para os mecanismos de busca. Vimos um aumento significativo no tráfego desde então. Excelente trabalho!</p>
-            <p class="author">Ana Santos, Diretora de Marketing da QLYTYC Advisory</p>
-        </div>
-        <img src="@/assets/images/vertical-dots.png">
-    </article>
-</section>
+<TestiMonials />
 </template>
 
 <script>
 import InitialServices from '@/components/InitialServices.vue'
+import TestiMonials from '@/components/TestiMonials.vue';
 export default {
   components: {
     InitialServices,
+    TestiMonials,
   }
 }
 </script>
