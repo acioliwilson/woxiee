@@ -6,7 +6,7 @@
 
 <InitialServices />
 
-<img src="@/assets/images/default-wave.png" style="margin: 0 auto; display: table;">
+<img src="@/assets/images/default-wave.png" class="waves">
 
 <section class="jobs">
     <div class="jobs-bg">
@@ -39,3 +39,15 @@ export default {
   }
 }
 </script>
+
+<style lang="css" scoped>
+.waves {
+    margin: 0 auto;
+    display: table;
+}
+@media screen and (max-width: 700px) {
+    .waves { margin: 100px auto; }
+    .jobs { display: none; }
+    .dots { display: none; }
+}
+</style>

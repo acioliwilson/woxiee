@@ -8,13 +8,13 @@
                 <router-link class="footer-logo" to="/">
                     <img src="@/assets/images/woxiee-footer-logo.png" alt="Woxiee Footer Logo">
                 </router-link>
-                <p>
+                <p class="address">
                     Rua Palmeira dos Índios, 103, Maceió, Alagoas, Brasil<br />
                     (82) 99601-2515<br />
                     contato@woxiee.com<br />
                 </p>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 site">
                 <h2 class="purple-text">Site</h2>
                 <div class="map-links">
                     <router-link to="/a-woxiee">Sobre Nós</router-link>
@@ -25,7 +25,7 @@
             </div>
             <div class="col-md-3 follow">
                 <h2 class="purple-text">Siga-nos</h2>
-                <div class="d-flex gap-3 align-items-center">
+                <div class="d-flex gap-3 align-items-center social-icons-btn">
                     <a href="#" class="social-icon">
                         <i class="bi bi-instagram"></i>
                     </a>
@@ -262,5 +262,16 @@ a.router-link-exact-active {
 
 #navCheck {
   display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .footer-logo {
+        margin: 0 auto; 
+        display: table;
+    }
+    .address { margin: 20px 0 40px 0; line-height: 1.6; }
+    .address, .site, .follow { text-align: center; }
+    .follow { margin-top: 50px !important; }
+    .social-icons-btn { justify-content: center; margin-top: 20px; }
 }
 </style>

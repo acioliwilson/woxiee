@@ -30,10 +30,11 @@
 <style lang="css" scoped>
 .testimonials h2 {
     font-size: 35px;
-    font-weight: 600;
-    color: #000;
+    font-weight: 700;
+    color: #333;
     margin: 0 auto;
     text-align: center;
+    text-transform: uppercase;
 }
 
 article.left {

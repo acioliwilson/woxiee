@@ -1,6 +1,6 @@
 <template>
 <div class="container my-5">
-    <img src="@/assets/images/a-woxiee.png" alt="A Woxiee">
+    <img src="@/assets/images/a-woxiee.png" class="page-title" alt="A Woxiee">
     <div class="row">
         <div class="col-md-8 story mt-4">
             <p>
@@ -77,6 +77,14 @@
 @media screen and (max-width: 1000px) {
     .w-woxiee-icon {
         display: none;
+    }
+    .page-title {
+        margin: 0 auto;
+        display: table;
+    }
+    .story { text-align: center; }
+    .team {
+        justify-content: center;
     }
 }
 </style>

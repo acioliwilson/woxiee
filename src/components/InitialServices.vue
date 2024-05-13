@@ -109,4 +109,9 @@
     color: #FFF !important;
     font-family: 'Open Sans', sans-serif !important;
 }
+
+@media screen and (max-width: 700px) {
+    .s-card { width: 100%; text-align: center; }
+    .s-card-body { width: 100% !important; max-width: 100% !important; justify-content: center !important; }
+}
 </style>

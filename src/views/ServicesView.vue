@@ -1,6 +1,6 @@
 <template>
 <div class="container my-5">
-    <img src="@/assets/images/servicos.png" alt="O que fazemos?" class="d-table mx-auto">
+    <h1 class="page-title">O que fazemos?</h1>
     <p class=" my-4 text-center default-p">
         Na Woxiee, estamos comprometidos em oferecer uma ampla gama de serviços de alta qualidade para atender às necessidades únicas do seu negócio. Desde o desenvolvimento de sites impressionantes até estratégias avançadas de otimização SEO, nossa equipe experiente está aqui para ajudar sua marca a se destacar online. Conheça mais sobre o que oferecemos abaixo:
     </p>
@@ -15,33 +15,20 @@
         <span class="light-dot"></span>
     </div>
 </div>
-<div class="portfolio my-5">
-    <div class="res-ms">
-        <div class="container">
-            <div class="imagebox">
-                <img src="@/assets/images/resultados-da-mega-screenshot.png" class="screenshot mt-5">
-                <div class="portfolio-info">
-                    <h1>Resultados da Mega-Sena</h1>
-                    <p>Website desenvolvido para o resultadosdamegasena.com.br com o objetivo de disponibilizar os resultados das principais loterias federais. Automatizamos a atualização e disponibilização destes resultados através de uma API desenvolvida em Node juntamente ao desenvolvimento do website. Todo o design também desenvolvido pela Woxiee, permite que os usuários naveguem facilmente e tenham tudo ao seu alcance.</p>
-                    <a href="https://resultadosdamegasena.com.br" target="_blank">+ Ver mais</a>
-                </div>
-            </div>
+
+<div class="container my-5">
+    <div class="client res-ms"></div>
+    <div class="infobox">
+        <img src="@/assets/images/services/res-ms-profile.png" class="profile-img">
+        <div>
+            <h2>Resultados da Mega-Sena</h2>
+            <p>Website desenvolvido com o objetivo de disponibilizar os resultados das principais loterias federais. Resultados automatizados através de uma API desenvolvida exclusivamente para o site.</p>
         </div>
     </div>
-    <div class="marketmail">
-        <div class="container">
-            <div class="imagebox">
-                <div class="mktm-portfolio-info">
-                    <h1>MarketMail</h1>
-                    <p>Sistema de campanhas de email marketing desenvolvido com as tecnologias mais avançadas da atualidade. Dashboard completo com possibilidade de criação ou importação de lista de contatos, criação de campanha e customização de layout de email marketing. Sistema extremamente completo desenvolvido juntamente a sua API pela Woxiee.</p>
-                    <a href="https://resultadosdamegasena.com.br" target="_blank">+ Ver mais</a>
-                </div>
-                <img src="@/assets/images/marketmail-screenshot.png" class="screenshot2 mt-5">
-            </div>
-        </div>
-    </div>
+    <span class="serv-separator"></span>
 </div>
-<TestiMonials class="mt-negative" />
+
+<TestiMonials />
 </template>
 
 <script>
@@ -109,13 +96,16 @@ p.default-p {
     line-height: 1.5 !important;
 }
 
-.res-ms {
+.client {
     width: 100%;
-    min-height: 750px;
-    background: url('@/assets/images/resultados-da-mega-background.png') no-repeat;
+    height: 200px;
+    border-radius: 15px;
+    display: table;
+}
+
+.res-ms {
+    background: url('@/assets/images/services/res-ms-head.png') no-repeat;
     background-size: cover;
-    display: flex;
-    align-items: center;
 }
 
 .light-dot {
@@ -218,5 +208,54 @@ p.default-p {
 .mt-negative {
     margin-top: -70px;
     margin-bottom: 100px;
+}
+.page-title {
+    font-size: 45px;
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 800;
+    color: #333 !important;
+    text-align: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+.infobox {
+    margin-top: -140px;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.infobox div h2 {
+    margin-top: 90px;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 35px;
+}
+.infobox div p {
+    line-height: 1.7;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+}
+.serv-separator {
+    width: 100%;
+    max-width: 300px;
+    height: 1px;
+    display: table;
+    background: #EAEAEA;
+    margin: 70px auto;
+}
+
+@media screen and (max-width: 700px) {
+    .infobox {
+        flex-direction: column;
+    }
+    .infobox div h2 {
+        margin: 0 !important;
+        text-align: center;
+    }
+    .infobox div p {
+        text-align: center;
+    }
 }
 </style>
