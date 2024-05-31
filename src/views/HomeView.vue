@@ -6,7 +6,7 @@
 
 <InitialServices />
 
-<img src="@/assets/images/default-wave.png" class="waves">
+<img src="@/assets/images/default-wave.png" class="my-5 mx-auto d-table">
 
 <section class="jobs">
     <div class="jobs-bg">
