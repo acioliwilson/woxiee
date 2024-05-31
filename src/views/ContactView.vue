@@ -63,7 +63,7 @@ export default {
                 email: this.email,
                 message: this.message,
             }
-            await axios.post('http://localhost:3000/send', data)
+            await axios.post('https://woxiee-sendmail2.vercel.app/send', data)
             .then((response) => {
                 console.log(response)
                 this.$router.go('/')
