@@ -7,8 +7,8 @@
             <img src="@/assets/images/left-arrow.png" alt="">
         </div>
         <div class="container my-5">
-            <div class="position-relative p-5 text-center text-muted bg-body border border-dashed rounded-5">
-                <button type="button" class="position-absolute top-0 end-0 p-3 m-3 btn-close bg-secondary bg-opacity-10 rounded-pill" aria-label="Close"></button>
+            <div class="position-relative p-5 text-center text-muted bg-body border border-dashed rounded-5" v-if="offer">
+                <button type="button" class="position-absolute top-0 end-0 p-3 m-3 btn-close bg-secondary bg-opacity-10 rounded-pill" aria-label="Close" @click="closeOffer"></button>
                 <i class="bi bi-box-seam-fill"></i>
                 <h1 class="text-body-emphasis">Site + Email Marketing</h1>
                 <p class="col-lg-6 mx-auto mb-4">
@@ -22,10 +22,28 @@
                     Aproveitar a Oferta
                 </router-link>
             </div>
+            <div class="d-flex justify-content-center" v-else>
+                <p class="text-center text-muted">Nenhuma oferta encontrada no momento. Em breve disponibilizaremos ofertas incríveis.</p>
+            </div>
         </div>
     </div>
 </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            offer: true,
+        }
+    },
+    methods: {
+        closeOffer() {
+            this.offer = !this.offer
+        }
+    }
+}
+</script>
 
 <style lang="css">
 .hot-offers {
