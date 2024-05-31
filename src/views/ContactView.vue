@@ -4,23 +4,23 @@
             <h1>ORÇAMENTOS</h1>
             <p>Estamos aqui para transformar suas ideias em realidade. Se você está procurando um serviço personalizado ou deseja um orçamento para seu projeto, por favor, clique no botão abaixo. Nosso time estará pronto para analisar suas necessidades e oferecer uma solução que atenda perfeitamente às suas expectativas.</p>
             <div class="quote-wrapper-btn">
-                <button class="quote-btn">Fazer Orçamento</button>
+                <button class="quote-btn" @click="redirect">Fazer Orçamento</button>
             </div>
         </div>
         <div class="sugestions">
             <h1>DÚVIDAS E SUGESTÕES</h1>
             <p>Estamos ansiosos para ouvir de você. Se você tem alguma dúvida, feedback ou sugestão sobre nossos produtos ou serviços, por favor, não hesite em compartilhar conosco através do formulário abaixo. Estamos sempre buscando melhorar e sua opinião é extremamente valiosa para nós.</p>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Seu nome">
+                <input type="text" class="form-control" placeholder="Seu nome" v-model="name">
             </div>
             <div class="form-group mt-3">
-                <input type="email" class="form-control" placeholder="Seu email">
+                <input type="email" class="form-control" placeholder="Seu email" v-model="email">
             </div>
             <div class="form-group mt-2">
-                <textarea placeholder="Sua mensagem" rows="10" class="form-control"></textarea>
+                <textarea placeholder="Sua mensagem" rows="10" class="form-control" v-model="message"></textarea>
             </div>
             <div class="form-group mt-2">
-                <button class="send-message">
+                <button class="send-message" @click="sendContact">
                     <span>Enviar</span>
                     <i class="bi bi-arrow-right-short"></i>
                 </button>
@@ -42,6 +42,36 @@
         </div>
     </div>
 </template>
+
+<script>
+import axios from 'axios'
+export default {
+    data() {
+        return {
+            name: '',
+            email: '',
+            message: '',
+        }
+    },
+    methods: {
+        redirect() {
+            this.$router.push('/oferta/criar-site')
+        },
+        async sendContact() {
+            const data = {
+                name: this.name,
+                email: this.email,
+                message: this.message,
+            }
+            await axios.post('http://localhost:3000/send', data)
+            .then((response) => {
+                console.log(response)
+                this.$router.go('/')
+            }).catch(error => console.error(error))
+        }
+    }
+}
+</script>
 
 <style lang="css" scoped>
 .quotes-and-partnerships {
