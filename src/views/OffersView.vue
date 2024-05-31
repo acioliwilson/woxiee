@@ -18,9 +18,9 @@
                     <span class="smaller-value">A PARTIR DE</span>
                     <p class="bigger-value">R$ 300</p>
                 </div>
-                <button class="btn-fill-gradient mb-5 mt-3 mx-auto" type="button">
+                <router-link to="/oferta/criar-site" class="btn-fill-gradient mb-5 mt-3 mx-auto">
                     Aproveitar a Oferta
-                </button>
+                </router-link>
             </div>
         </div>
     </div>
@@ -61,5 +61,16 @@
     font-size: 35px;
     font-weight: 600;
     margin: -10px 0 0 0;
+}
+
+.g-forms {
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FFF;
+    z-index: 99999;
 }
 </style>
